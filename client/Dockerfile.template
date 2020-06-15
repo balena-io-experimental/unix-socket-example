@@ -1,0 +1,7 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-node
+
+RUN mkdir /usr/src/app
+COPY client.js /usr/src/app/
+WORKDIR /usr/src/app
+
+CMD ["node", "client.js"]

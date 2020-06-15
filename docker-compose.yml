@@ -1,0 +1,18 @@
+version: '2'
+services:
+  server:
+    restart: always
+    hostname: server
+    build: ./server
+    privileged: true
+    volumes:
+      - run:/run
+  client:
+    restart: always
+    hostname: client
+    build: ./client
+    privileged: true
+    volumes:
+      - run:/run
+volumes:
+  run:
